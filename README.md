@@ -1,6 +1,6 @@
 # NP Events — Portfolio website
 
-Static site for **Niti Punjabi** (Bay Area event design). Works in any modern browser on **desktop and mobile**.
+Static site for **Niti Punjabi** — **Event Stylist** (Bay Area). Works in any modern browser on **desktop and mobile**.
 
 ## Live site (GitHub Pages)
 
