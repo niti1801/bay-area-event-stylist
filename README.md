@@ -34,3 +34,9 @@ GitHub Pages rebuilds in about one minute. Hard-refresh the live URL if you don�
 - `css/` — styles  
 - `js/` — carousel behavior  
 - `assets/images/` — images and icons  
+
+## Portfolio order
+
+Within each category (e.g. **Balloon arch and backdrop styling**), **new projects go first**—directly under that section’s subheading—followed by older work. The first project block uses `project__block` only; each additional project adds `project__block--spaced` for spacing.
+
+Carousel photos use **center-cropped** JPEGs at **710×946px** (2× the on-screen slot, aspect **355∶473** to match `.carousel__slide img`). To re-export the Holi set from source PNGs, copy the four originals into `assets/holi-sources/` using the filenames listed in `scripts/process_holi_images.py`, then run `scripts/process_holi_images.py` with Pillow available (e.g. create `.venv`, `pip install Pillow`, then `.venv/bin/python scripts/process_holi_images.py`).
