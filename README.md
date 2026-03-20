@@ -35,7 +35,8 @@ GitHub Pages rebuilds in about one minute. Hard-refresh the live URL if you don�
 - `js/` — carousel behavior  
 - `assets/images/` — images and icons  
 - `assets/images/og-image.jpg` — **1200×630** Open Graph / Twitter link preview (derived from `hero.jpg`; regenerate if you replace the hero photo)  
-- `assets/images/favicon-32.png`, `favicon-192.png`, `apple-touch-icon.png` — favicons from the logo  
+- `assets/images/logo-mark-icon.png` — **1024×1024** source for favicons (mark on white)  
+- `assets/images/favicon-32.png`, `favicon-192.png`, `apple-touch-icon.png` — resized from `logo-mark-icon.png`  
 
 ## Portfolio order
 
