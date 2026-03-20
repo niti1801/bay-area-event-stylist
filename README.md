@@ -2,6 +2,12 @@
 
 Static site for **Niti Punjabi** (Bay Area event design). Works in any modern browser on **desktop and mobile**.
 
+## Live site (GitHub Pages)
+
+**[https://niti1801.github.io/np-events-website/](https://niti1801.github.io/np-events-website/)**
+
+Repository: [github.com/niti1801/np-events-website](https://github.com/niti1801/np-events-website)
+
 ## Local preview
 
 ```bash
@@ -10,18 +16,17 @@ python3 -m http.server 8765
 
 Open [http://127.0.0.1:8765](http://127.0.0.1:8765).
 
-## GitHub Pages (live website)
+## Updating the live site
 
-1. Push this repository to GitHub.
-2. In the repo on GitHub: **Settings → Pages**.
-3. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
-4. Choose branch **main** and folder **/ (root)**, then **Save**.
+After you change files locally:
 
-Your site will be available at:
+```bash
+git add -A
+git commit -m "Describe your change"
+git push
+```
 
-`https://<your-username>.github.io/<repository-name>/`
-
-(If the repo is named `<username>.github.io`, the site URL is `https://<username>.github.io/`.)
+GitHub Pages rebuilds in about one minute. Hard-refresh the live URL if you don’t see updates.
 
 ## Project layout
 
