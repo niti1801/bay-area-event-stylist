@@ -4,9 +4,9 @@ Static site for **Niti Punjabi** — **Event Stylist** (Bay Area). Works in any 
 
 ## Live site (GitHub Pages)
 
-**[https://niti1801.github.io/np-events-website/](https://niti1801.github.io/np-events-website/)**
+**[https://niti1801.github.io/bay-area-event-stylist/](https://niti1801.github.io/bay-area-event-stylist/)**
 
-Repository: [github.com/niti1801/np-events-website](https://github.com/niti1801/np-events-website)
+Repository: [github.com/niti1801/bay-area-event-stylist](https://github.com/niti1801/bay-area-event-stylist)
 
 ## Local preview
 
