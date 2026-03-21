@@ -217,6 +217,14 @@ a {
 .cta-block--closing {
   padding-top: 2.5rem;
   padding-bottom: 3rem;
+  /* Explicit centering (matches first CTA); avoids left drift from flex defaults or cached CSS */
+  align-items: center;
+  text-align: center;
+}
+
+.cta-block__text {
+  text-align: center;
+  width: 100%;
 }
 
 .cta-block__lead {
