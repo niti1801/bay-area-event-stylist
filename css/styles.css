@@ -322,6 +322,44 @@ a {
   height: 20px;
 }
 
+/* —— Scroll reveals —— */
+
+@keyframes tray-rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes category-surface {
+  from { transform: translateY(10px); }
+  to   { transform: translateY(0); }
+}
+
+/* Scoped to no-preference so content stays visible without JS or for reduced-motion users */
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal] {
+    opacity: 0;
+  }
+
+  [data-reveal].is-visible {
+    animation: tray-rise 0.65s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  }
+
+  .section-title[data-reveal].is-visible {
+    animation-duration: 0.5s;
+  }
+
+  /* Category label nudges up slightly after the tray body has started rising */
+  .project.is-visible .project__category {
+    animation: category-surface 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) 0.15s both;
+  }
+}
+
 /* —— Portfolio —— */
 .portfolio {
   padding: 1rem 23px 3.5rem;
@@ -496,6 +534,45 @@ a {
 .carousel__dot.is-active {
   background: var(--color-secondary);
   transform: scale(1.15);
+}
+
+/* —— Scroll to top —— */
+.scroll-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease, box-shadow 0.15s ease;
+}
+
+.scroll-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.scroll-top:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.32);
+  transform: translateY(-2px);
+}
+
+.scroll-top:active {
+  transform: scale(0.93);
+  transition-duration: 0.08s;
 }
 
 /* —— Footer —— */
@@ -752,5 +829,19 @@ a {
 
   .site-footer.is-visible .contact-grid > * {
     animation: none;
+  }
+
+  .scroll-top {
+    transition: opacity 0.15s ease;
+    transform: none;
+  }
+
+  .scroll-top.is-visible {
+    transform: none;
+  }
+
+  .scroll-top:hover,
+  .scroll-top:active {
+    transform: none;
   }
 }
